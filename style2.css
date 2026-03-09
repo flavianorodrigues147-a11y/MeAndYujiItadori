@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000000; /* fundo escuro */
+    color: #f4f4f4; /* texto claro */
+}
+
+/* centraliza tudo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+/* caixa com borda */
+.card {
+    width: 700px;
+    padding: 30px;
+    border: 2px solid #e50914; /* vermelho vibrante */
+    background: #000000; /* fundo escuro para a caixa */
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6); /* brilho vermelho */
+}
+
+.section-box {
+    margin-top: 30px;
+}
+
+a {
+    color: #e50914; /* links vermelhos */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid #e50914; /* vermelho vibrante */
+    border-radius: 6px;
+    background: #000000; /* fundo escuro */
+    color: #f4f4f4; /* texto claro */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
+}
+
+nav ul li a:hover {
+    background: #e50914; /* fundo vermelho no hover */
+    color: #fff; /* texto branco */
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.8);
+    transform: scale(1.05); /* leve aumento */
+}
+
+body.mobile .card {
+    width: 90%; /* ocupa quase toda a tela no celular */
+    padding: 20px;
+}
+
+body.desktop .card {
+    width: 700px; /* largura fixa no notebook */
+    padding: 40px;
+}
+
+nav ul li a,
+.rodape a {
+    text-decoration: none !important;
+}

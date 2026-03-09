@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000; /* fundo escuro */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f4f4f4; /* texto claro para contraste */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    border: 2px solid #e50914; /* vermelho vibrante */
+    padding: 30px;
+    width: 600px;
+    background: #000000; /* caixa escura */
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6); /* brilho vermelho */
+}
+
+section {
+    margin-top: 40px;
+}
+
+a {
+    color: #e50914; /* links vermelhos */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body.mobile .card {
+    width: 90%; /* ocupa quase toda a tela no celular */
+    padding: 20px;
+}
+
+body.desktop .card {
+    width: 700px; /* largura fixa no notebook */
+    padding: 40px;
+}
