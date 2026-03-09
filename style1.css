@@ -11,6 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    padding: 10px; /* espaço lateral no celular */
 }
 
 /* caixa com borda */
@@ -20,6 +21,8 @@ body {
     border: 2px solid #e50914; /* vermelho vibrante */
     background: #000000; /* fundo escuro para a caixa */
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.6); /* brilho vermelho */
+    border-radius: 8px; /* cantos arredondados */
+    line-height: 1.5; /* melhora leitura */
 }
 
 section {
@@ -51,6 +54,7 @@ nav ul {
     padding: 0;
     margin: 20px 0;
     justify-content: center;
+    flex-wrap: wrap; /* quebra no celular */
 }
 
 nav ul li a {
@@ -73,14 +77,31 @@ nav ul li a:hover {
     transform: scale(1.05); /* leve aumento */
 }
 
-body.mobile .card {
-    width: 90%; /* ocupa quase toda a tela no celular */
-    padding: 20px;
-}
+/* Layout para celular */
+@media (max-width: 768px) {
+    .card {
+        width: 95%; /* ocupa quase toda a tela */
+        padding: 20px;
+        font-size: 16px; /* texto maior para leitura confortável */
+    }
 
-body.desktop .card {
-    width: 700px; /* largura fixa no notebook */
-    padding: 40px;
+    section {
+        margin-top: 30px;
+    }
+
+    .rodape {
+        font-size: 12px;
+        padding-top: 30px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
 }
 
 nav ul li a,

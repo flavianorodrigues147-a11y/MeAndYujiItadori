@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding: 10px; /* espaço lateral no celular */
 }
 
 .card {
@@ -22,10 +23,12 @@ body {
     width: 600px;
     background: #000000; /* caixa escura */
     box-shadow: 0 0 15px rgba(229, 9, 20, 0.6); /* brilho vermelho */
+    border-radius: 8px; /* cantos arredondados para suavizar */
+    line-height: 1.5; /* melhora leitura */
 }
 
 section {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 a {
@@ -38,12 +41,24 @@ a:hover {
     text-decoration: underline;
 }
 
-body.mobile .card {
-    width: 90%; /* ocupa quase toda a tela no celular */
-    padding: 20px;
+/* Layout para celular */
+@media (max-width: 768px) {
+    .card {
+        width: 95%; /* ocupa quase toda a tela */
+        padding: 20px;
+        font-size: 16px; /* texto maior para leitura confortável */
+    }
+
+    section {
+        margin-top: 20px;
+    }
 }
 
-body.desktop .card {
-    width: 700px; /* largura fixa no notebook */
-    padding: 40px;
+/* Layout para desktop */
+@media (min-width: 769px) {
+    .card {
+        width: 700px; /* largura fixa */
+        padding: 40px;
+        font-size: 18px;
+    }
 }
