@@ -14,7 +14,8 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2.3em;
+    letter-spacing: 1px;
     margin-bottom: 20px;
     color: #fff; /* título branco para destaque */
 }
@@ -28,11 +29,12 @@ h1 {
 }
 
 .card {
+    
     border: 2px solid #e50914; /* vermelho vibrante */
-    padding: 30px;
+    padding: 40px;
     width: 600px;
     background: #000000; /* caixa escura */
-    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6); /* brilho vermelho */
+    animation: brilho-card 2.5s infinite alternate;
     border-radius: 8px; /* cantos arredondados para suavizar */
     line-height: 1.5; /* melhora leitura */
 }
@@ -97,9 +99,10 @@ a:hover {
 }
 
 .botao-tema {
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.7);
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     background: #000;
     border: 2px solid #e50914;
     border-radius: 50%;
@@ -137,18 +140,27 @@ footer p {
 #tema {
     width: 55px;
     height: 55px;
-    border-radius: 50%; /* deixa redondo */
+    border-radius: 50%;
     border: 3px solid #e50914;
     background: #000000;
     color: #ff0000;
-    font-size: 26px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 
+    font-size: 26px;
+    line-height: 1;
+
+    cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
+}
+
+#tema span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #tema:hover {
@@ -156,4 +168,49 @@ footer p {
     color: #ffffff;
     transform: scale(1.15);
     box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
+}
+
+/* animação de troca de página */
+
+body {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.saindo {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+body.entrando {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+@keyframes brilho-card {
+
+    0% {
+        box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(229, 9, 20, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+
+}
+
+#particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+nav ul li a:active{
+transform:scale(0.95);
 }

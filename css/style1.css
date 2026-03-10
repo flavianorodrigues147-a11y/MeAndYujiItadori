@@ -26,7 +26,7 @@ body {
     padding: 40px;
     border: 2px solid #e50914; /* vermelho vibrante */
     background: #000000;
-    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+    animation: brilho-card 2.5s infinite alternate;
     border-radius: 8px;
     line-height: 1.5;
 }
@@ -192,4 +192,49 @@ nav ul li a,
 .light nav ul li a:hover {
     background: #e50914;
     color: #ffffff;
+}
+
+/* animação de troca de página */
+
+body {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body.saindo {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+body.entrando {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+@keyframes brilho-card {
+
+    0% {
+        box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(229, 9, 20, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+    }
+
+}
+
+#particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+nav ul li a:active{
+transform:scale(0.95);
 }

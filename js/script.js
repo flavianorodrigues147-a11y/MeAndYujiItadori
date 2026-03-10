@@ -1,3 +1,10 @@
+document.body.classList.add("entrando");
+
+window.addEventListener("load", () => {
+    document.body.classList.remove("entrando");
+});
+
+
 // Mostrar página com fade quando carregar
 window.addEventListener("load", () => {
     document.body.style.visibility = "visible";
@@ -81,3 +88,73 @@ if (botaoTema) {
 
 }
 
+// animação suave ao trocar de página
+const links = document.querySelectorAll("a");
+
+links.forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+        const destino = this.href;
+
+        if(destino.startsWith("#") || this.target === "_blank") return;
+
+        e.preventDefault();
+
+        document.body.classList.add("saindo");
+
+        setTimeout(() => {
+            window.location.href = destino;
+        }, 350);
+
+    });
+
+});
+
+const canvas = document.getElementById("particulas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particulas = [];
+
+for (let i = 0; i < 60; i++) {
+    particulas.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        speedY: Math.random() * 0.5 + 0.2
+    });
+}
+
+function animarParticulas() {
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "rgba(229,9,20,0.8)";
+
+    particulas.forEach(p => {
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        p.y += p.speedY;
+
+        if (p.y > canvas.height) {
+            p.y = 0;
+            p.x = Math.random() * canvas.width;
+        }
+
+    });
+
+    requestAnimationFrame(animarParticulas);
+}
+
+animarParticulas();
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
