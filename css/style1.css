@@ -130,3 +130,6 @@ footer p {
     color: #ffffff;          /* Cor do texto (opcional) */
 }
 
+.hidden {
+  visibility: hidden;
+}
