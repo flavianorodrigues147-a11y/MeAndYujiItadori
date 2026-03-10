@@ -51,30 +51,30 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 0;
+    padding: 5px 5;
     margin: 20px 0;
     justify-content: center;
     flex-wrap: wrap; /* quebra no celular */
 }
-
 nav ul li a {
     display: inline-block;
-    padding: 12px 24px;
-    border: 2px solid #e50914; /* vermelho vibrante */
-    border-radius: 6px;
-    background: #000000; /* fundo escuro */
-    color: #f4f4f4; /* texto claro */
+    padding: 28px 40px;   /* aumenta o tamanho do botão */
+    border: 3px solid #e50914; /* borda mais grossa */
+    border-radius: 12px;  /* cantos mais arredondados */
+    background: #000000;
+    color: #ff0000;
     font-weight: bold;
+    font-size: 1.5em;     /* aumenta o tamanho da fonte */
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
 }
 
 nav ul li a:hover {
-    background: #e50914; /* fundo vermelho no hover */
-    color: #fff; /* texto branco */
-    box-shadow: 0 0 15px rgba(229, 9, 20, 0.8);
-    transform: scale(1.05); /* leve aumento */
+    background: #e50914;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
+    transform: scale(1.08); /* aumenta um pouco mais no hover */
 }
 
 /* Layout para celular */
@@ -108,3 +108,25 @@ nav ul li a,
 .rodape a {
     text-decoration: none !important;
 }
+
+h1 {
+    text-align: center;   /* Centraliza horizontalmente */
+    font-size: 5em;       /* Ajusta o tamanho da fonte */
+    margin-top: 20px;     /* Dá um espaço superior */
+    color: #ffffff;          /* Cor do texto (opcional) */
+}
+
+p {
+    text-align: justify;  /* Justifica o texto para melhor leitura */
+    font-size: 2em;    /* Ajusta o tamanho da fonte */
+    margin-top: 20px;     /* Dá um espaço superior */
+    color: #f4f4f4;          /* Cor do texto (opcional) */
+}
+
+footer p {
+    text-align: center;   /* Centraliza horizontalmente */
+    font-size: 1.7em;    /* Ajusta o tamanho da fonte */
+    margin-top: 20px;     /* Dá um espaço superior */
+    color: #ffffff;          /* Cor do texto (opcional) */
+}
+
