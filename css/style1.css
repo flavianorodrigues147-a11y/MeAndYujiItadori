@@ -1,4 +1,7 @@
 body {
+    opacity: 100;
+    transition: opacity 0.4s ease;
+    visibility: hidden;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: #000000; /* fundo escuro */
