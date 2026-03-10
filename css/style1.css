@@ -41,8 +41,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 5px 5px; /* corrigido */
-    margin: 20px 0;
+    padding: 10px 10px; /* corrigido */
+    margin: 20px 20px; /* corrigido */
     justify-content: center;
     flex-wrap: wrap; /* quebra no celular */
 }
@@ -124,7 +124,7 @@ nav ul li a,
 
 /* ===== RESPONSIVIDADE ===== */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
     .card {
         width: 95%;
@@ -146,8 +146,45 @@ nav ul li a,
     }
 
     nav ul li a {
-        padding: 10px 18px;
-        font-size: 14px;
+        padding: 26px 36px;
+        font-size: 36px;
     }
 
+
+}
+
+
+
+.light h1 {
+    color: #000000; /* título escuro para tema claro */
+}
+
+.light {
+    background: #ffffff;
+    color: #000000;
+}
+
+.light .card {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #e50914;
+}
+
+.light p {
+    color: #000000;
+}
+
+.light footer p {
+    color: #000000;
+}
+
+.light nav ul li a {
+    background: #ffffff;
+    color: #e50914;
+    border: 3px solid #e50914;
+}
+
+.light nav ul li a:hover {
+    background: #e50914;
+    color: #ffffff;
 }
