@@ -116,3 +116,44 @@ a:hover {
     color: white;
     transform: rotate(20deg) scale(1.1);
 }
+
+body,
+.card,
+nav ul li a,
+p,
+h1,
+footer p {
+    transition: background-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+}
+
+#tema {
+    transition: transform 0.4s ease;
+}
+
+#tema.animar {
+    transform: rotate(180deg) scale(1.2);
+}
+
+#tema {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; /* deixa redondo */
+    border: 3px solid #e50914;
+    background: #000000;
+    color: #ff0000;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
+}
+
+#tema:hover {
+    background: #e50914;
+    color: #ffffff;
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
+}

@@ -55,6 +55,13 @@ if (temaSalvo === "light") {
 if (botaoTema) {
 
     botaoTema.addEventListener("click", () => {
+        
+        botaoTema.classList.add("animacao-tema");
+
+        setTimeout(() => {
+            botaoTema.classList.remove("animacao-tema");
+        }, 300);
+
 
         document.body.classList.toggle("light");
 
@@ -73,3 +80,4 @@ if (botaoTema) {
     });
 
 }
+
