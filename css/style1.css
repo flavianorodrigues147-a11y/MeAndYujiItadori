@@ -1,5 +1,6 @@
+/* ===== BASE ===== */
 body {
-    opacity: 100;
+    opacity: 0;
     transition: opacity 0.4s ease;
     visibility: hidden;
     margin: 0;
@@ -7,6 +8,8 @@ body {
     background: #000000; /* fundo escuro */
     color: #f4f4f4; /* texto claro */
 }
+
+/* ===== LAYOUT ===== */
 
 /* centraliza tudo */
 .container {
@@ -22,52 +25,37 @@ body {
     width: 700px;
     padding: 40px;
     border: 2px solid #e50914; /* vermelho vibrante */
-    background: #000000; /* fundo escuro para a caixa */
-    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6); /* brilho vermelho */
-    border-radius: 8px; /* cantos arredondados */
-    line-height: 1.5; /* melhora leitura */
+    background: #000000;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+    border-radius: 8px;
+    line-height: 1.5;
 }
 
 section {
     margin-top: 70px;
 }
 
-.rodape {
-    margin-top: 60px;
-    padding-top: 50px;
-    text-align: center;
-    font-size: 14px;
-    color: #aaa; /* cinza claro para contraste */
-}
-
-.rodape a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #e50914; /* links vermelhos */
-}
-
-.rodape a:hover {
-    text-decoration: underline;
-}
+/* ===== NAVEGAÇÃO ===== */
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    padding: 5px 5;
+    padding: 5px 5px; /* corrigido */
     margin: 20px 0;
     justify-content: center;
     flex-wrap: wrap; /* quebra no celular */
 }
+
 nav ul li a {
     display: inline-block;
-    padding: 28px 40px;   /* aumenta o tamanho do botão */
-    border: 3px solid #e50914; /* borda mais grossa */
-    border-radius: 12px;  /* cantos mais arredondados */
+    padding: 28px 40px;
+    border: 3px solid #e50914;
+    border-radius: 12px;
     background: #000000;
     color: #ff0000;
     font-weight: bold;
-    font-size: 1.5em;     /* aumenta o tamanho da fonte */
+    font-size: 1.5em;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
@@ -77,15 +65,71 @@ nav ul li a:hover {
     background: #e50914;
     color: #fff;
     box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
-    transform: scale(1.08); /* aumenta um pouco mais no hover */
+    transform: scale(1.08);
 }
 
-/* Layout para celular */
+/* ===== RODAPÉ ===== */
+
+.rodape {
+    margin-top: 60px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.rodape a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #e50914;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+/* ===== TIPOGRAFIA ===== */
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+p {
+    text-align: justify;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #f4f4f4;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1.7em;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* ===== UTILIDADES ===== */
+
+nav ul li a,
+.rodape a {
+    text-decoration: none !important;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
 @media (max-width: 768px) {
+
     .card {
-        width: 95%; /* ocupa quase toda a tela */
+        width: 95%;
         padding: 20px;
-        font-size: 16px; /* texto maior para leitura confortável */
+        font-size: 16px;
     }
 
     section {
@@ -105,34 +149,5 @@ nav ul li a:hover {
         padding: 10px 18px;
         font-size: 14px;
     }
-}
 
-nav ul li a,
-.rodape a {
-    text-decoration: none !important;
-}
-
-h1 {
-    text-align: center;   /* Centraliza horizontalmente */
-    font-size: 5em;       /* Ajusta o tamanho da fonte */
-    margin-top: 20px;     /* Dá um espaço superior */
-    color: #ffffff;          /* Cor do texto (opcional) */
-}
-
-p {
-    text-align: justify;  /* Justifica o texto para melhor leitura */
-    font-size: 2em;    /* Ajusta o tamanho da fonte */
-    margin-top: 20px;     /* Dá um espaço superior */
-    color: #f4f4f4;          /* Cor do texto (opcional) */
-}
-
-footer p {
-    text-align: center;   /* Centraliza horizontalmente */
-    font-size: 1.7em;    /* Ajusta o tamanho da fonte */
-    margin-top: 20px;     /* Dá um espaço superior */
-    color: #ffffff;          /* Cor do texto (opcional) */
-}
-
-.hidden {
-  visibility: hidden;
 }

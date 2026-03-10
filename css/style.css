@@ -1,5 +1,5 @@
 body {
-    opacity: 100;
+    opacity: 0;
     transition: opacity 0.4s ease;
     visibility: hidden;
     margin: 0;
@@ -10,6 +10,13 @@ body {
     background: #000000; /* fundo escuro */
     font-family: Arial, Helvetica, sans-serif;
     color: #f4f4f4; /* texto claro para contraste */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff; /* título branco para destaque */
 }
 
 .container {
