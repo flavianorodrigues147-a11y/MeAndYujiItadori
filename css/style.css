@@ -56,7 +56,7 @@ a:hover {
 /* Layout para celular */
 @media (max-width: 768px) {
     .card {
-        width: 95%; /* ocupa quase toda a tela */
+        width: 88%; /* ocupa quase toda a tela */
         padding: 20px;
         font-size: 16px; /* texto maior para leitura confortável */
     }
@@ -218,7 +218,6 @@ transform:scale(0.95);
 .avatar{
 width:110px;
 height:110px;
-
 border-radius:50%;
 object-fit:cover;
 
@@ -226,7 +225,10 @@ border:3px solid #e50914;
 
 box-shadow:0 0 20px rgba(229,9,20,0.9);
 
-margin-bottom:20px; /* espaço entre avatar e card */
+margin-bottom:-55px;
+
+z-index:2;
+position:relative;
 }
 
 .container{
