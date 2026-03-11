@@ -238,3 +238,28 @@ body.entrando {
 nav ul li a:active{
 transform:scale(0.95);
 }
+
+
+.avatar{
+width:110px;
+height:110px;
+border-radius:50%;
+object-fit:cover;
+
+border:3px solid #e50914;
+
+box-shadow:0 0 20px rgba(229,9,20,0.9);
+
+margin: 0 0 60px 0;
+
+z-index:2;
+position:relative;
+}
+
+.container{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+
