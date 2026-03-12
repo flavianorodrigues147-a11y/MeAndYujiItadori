@@ -54,7 +54,7 @@ if (temaSalvo === "light") {
     document.body.classList.add("light");
     if(botaoTema) botaoTema.textContent = "☽";
 } else {
-    if(botaoTema) botaoTema.textContent = "☀︎";
+    if(botaoTema) botaoTema.textContent = "☼︎";
 }
 
 
@@ -80,7 +80,7 @@ if (botaoTema) {
         } else {
 
             localStorage.setItem("tema", "dark");
-            botaoTema.textContent = "☀︎";
+            botaoTema.textContent = "☼︎";
 
         }
 
