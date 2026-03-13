@@ -20,19 +20,24 @@ body {
     padding: 10px; /* espaço lateral no celular */
 }
 
-/* caixa com borda */
 .card {
-    width: 700px;
-    padding: 40px;
-    border: 2px solid #e50914; /* vermelho vibrante */
+    width: 90%;
+    max-width: 800px;
+
+    padding: 50px;
+
+    border: 2px solid #e50914;
     background: #000000;
-    animation: brilho-card 2.5s infinite alternate;
+
     border-radius: 8px;
-    line-height: 1.5;
+
+    animation: brilho-card 2.5s infinite alternate;
+    line-height: 1.5; /* melhora leitura */
 }
 
+
 section {
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 /* ===== NAVEGAÇÃO ===== */
@@ -40,26 +45,35 @@ section {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     padding: 10px 10px; /* corrigido */
-    margin: 20px 20px; /* corrigido */
+    margin: 5px 0; /* corrigido */
     justify-content: center;
     flex-wrap: wrap; /* quebra no celular */
 }
 
+
 nav ul li a {
     display: inline-block;
-    padding: 28px 40px;
+
+    padding: 22px 60px;
+
     border: 3px solid #e50914;
-    border-radius: 12px;
+    border-radius: 14px;
+
     background: #000000;
     color: #ff0000;
+
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.5rem;
+
     text-decoration: none;
+
     transition: all 0.3s ease;
-    box-shadow: 0 0 12px rgba(229, 9, 20, 0.6);
+
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
 }
+
 
 nav ul li a:hover {
     background: #e50914;
@@ -67,6 +81,7 @@ nav ul li a:hover {
     box-shadow: 0 0 20px rgba(229, 9, 20, 0.9);
     transform: scale(1.08);
 }
+
 
 /* ===== RODAPÉ ===== */
 
@@ -143,18 +158,17 @@ nav ul li a,
 
     /* botões um embaixo do outro no celular */
     nav ul {
-        gap: 20px;
+        gap: 30px;
         flex-direction: column;
         align-items: center;
     }
 
-    /* botões grandes */
     nav ul li a {
-        padding: 30px 50px;
-        font-size: 28px;
+        padding: 22px 45px;
+        font-size: 1.3rem;
         width: 90%;
         text-align: center;
-    }
+}
 
 }
 
@@ -241,8 +255,8 @@ transform:scale(0.95);
 
 
 .avatar{
-width:200px;
-height:200px;
+width:220px;
+height:220px;
 border-radius:50%;
 object-fit:cover;
 
