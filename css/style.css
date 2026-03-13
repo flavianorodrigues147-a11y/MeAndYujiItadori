@@ -312,3 +312,55 @@ align-items:center;
     color: #ffffff;
 }
 
+
+/* ===== NAVEGAÇÃO ===== */
+
+nav ul{
+list-style:none;
+display:flex;
+gap:35px;
+padding:0;
+margin:15px 0;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav ul li a{
+
+display:inline-block;
+
+padding:18px 45px;
+
+border:3px solid #e50914;
+border-radius:12px;
+
+background:#000;
+color:#ff0000;
+
+font-weight:bold;
+font-size:1.2rem;
+
+text-decoration:none;
+
+transition:all 0.3s ease;
+
+box-shadow:0 0 18px rgba(229,9,20,0.9);
+}
+
+nav ul li a:hover{
+background:#e50914;
+color:#fff;
+transform:scale(1.07);
+}
+.nav-botoes{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:25px;
+}
+
+.nav-botoes .botao-nav{
+margin:0;
+padding:14px 24px;
+font-size:16px;
+}
